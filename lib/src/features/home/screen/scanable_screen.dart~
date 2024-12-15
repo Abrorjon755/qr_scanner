@@ -1,0 +1,20 @@
+import 'package:flutter/material.dart';
+
+class ScanableScreen extends CustomPainter {
+  const ScanableScreen();
+
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    final paint = Paint()
+      ..color = Colors.white
+      ..strokeWidth = 10;
+    canvas.drawRect(
+      Rect.fromCenter(center: Offset.zero,width: size.width, height: size.height),
+      paint,
+    );
+  }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => true;
+}
